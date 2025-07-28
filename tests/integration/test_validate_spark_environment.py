@@ -33,7 +33,6 @@ def __extract_version_line(java_version_output: str) -> str:
         pytest.fail("Couldn't find version information in `java -version` output.")
     return version_line
 
-
 # pylint: disable=R1710
 def __parse_major_version(version_line: str) -> int:
     version_regex = re.compile(r'version "(?P<major>\d+)\.(?P<minor>\d+)\.\w+"')
